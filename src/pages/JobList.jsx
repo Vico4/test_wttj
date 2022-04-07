@@ -13,6 +13,11 @@ function JobList() {
     const [jobList, getJobList] = useState({})
     const [isLoading, setLoading] = useState(true)
     const [error, setError] = useState(false)
+    // mettre un state filter géré par un composant form
+    const [filters, setFilters] = useState({})
+
+    // afficher tous les détails dans un truc déroulant plutôt que dans JobPage 
+    // pour pas multiplier les fetch ? 
 
     useEffect(() => {
         async function fetchData() {
