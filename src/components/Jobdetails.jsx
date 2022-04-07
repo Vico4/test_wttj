@@ -1,7 +1,7 @@
 function JobDetails() {
 
     return(
-        <p>Coucou un seul job</p>
+        <p>vraiment vraiment</p>
     )
 }
 

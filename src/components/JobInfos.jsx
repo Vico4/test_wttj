@@ -1,8 +1,12 @@
+import { Box } from '@welcome-ui/box'
+import { Text } from '@welcome-ui/text'
 
 function JobInfos() {
 
     return(
-        <p>Coucou les jobs</p>
+        <Box>
+            <Text variant="h5"> Un super job </Text>
+        </Box>
     )
 }
 

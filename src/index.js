@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { createTheme, WuiProvider } from '@welcome-ui/core'
 import { Button } from '@welcome-ui/button'
 import JobList from './pages/JobList';
-import JobDetails from './pages/JobDetails';
+import JobDetails from './pages/JobPage';
+import JobPage from './pages/JobPage';
 
 
 
@@ -39,7 +40,7 @@ ReactDOM.render(
       >
         <Routes>
           <Route path="/" element={<JobList/>}/>
-          <Route path="/details/:jobId" element={<JobDetails/>}/>
+          <Route path="/details/:jobId" element={<JobPage/>}/>
         </Routes>
     </WuiProvider>
     </Router>
