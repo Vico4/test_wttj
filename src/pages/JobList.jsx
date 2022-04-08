@@ -6,6 +6,9 @@ import { Search } from '@welcome-ui/search'
 import { Stack } from '@welcome-ui/stack'
 import { Text } from '@welcome-ui/text'
 import { useState, useEffect } from 'react'
+import { Modal, useModalState } from '@welcome-ui/modal'
+import JobCard from '../components/Jobcard'
+
 
 function JobList() {
 
@@ -15,6 +18,8 @@ function JobList() {
     // mettre un state filter géré par un composant form
     const [filters, setFilters] = useState({})
     const [search, setSearch] = useState('')
+    const modal = useModalState()
+
 
     // afficher jobInfos et jobDetails avec une key et les data en props 
 
@@ -57,7 +62,11 @@ function JobList() {
                 <Searchbar />
                 {isLoading ? 
                     (<Loader/>) : 
-                    (<>{jobList.map((job) => (<JobInfos {...job}/>))}</>)
+                    (<>{jobList.map((job) => (
+                    <JobCard {...job}/>
+
+                    
+                    ))}</>)
                     }
             </Stack>
         </Box> 

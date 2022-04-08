@@ -1,13 +1,16 @@
+import { Button } from "@welcome-ui/button"
+import JobInfos from "./JobInfos"
 
-function JobDetails({description, profile, process, salary}) {
+function JobDetails(props) {
 
-    
     return(
         <>
-        <div dangerouslySetInnerHTML={{__html: description}}></div>
-        <div dangerouslySetInnerHTML={{__html: profile}}></div>
-        <div dangerouslySetInnerHTML={{__html: process}}></div>
-        <div>{salary.min && salary.min}</div>
+        <JobInfos {...props}/>
+        <div dangerouslySetInnerHTML={{__html: props.description}}></div>
+        <div dangerouslySetInnerHTML={{__html: props.profile}}></div>
+      {/*   <div dangerouslySetInnerHTML={{__html: props.}}></div>
+        <div>{salary.min && salary.min}</div> */}
+        <Button as="a" href={props.url} target="_blank"> Apply </Button>
         </>
     )
 }
