@@ -2166,6 +2166,16 @@
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
 
+"@welcome-ui/accordion@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/accordion/-/accordion-4.0.1.tgz#e1ec84942fc494f105f111bb44fcb86b122e1e91"
+  integrity sha512-13z6WLz39EZIUHiWUzdEAV8rVQt1GMROJ/8Y1tbLlvVdSP3Zmncg1ZZNul4TXKsu2N19rKXjAexd3u5i+cQELQ==
+  dependencies:
+    "@welcome-ui/icons.right" "^4.0.1"
+    "@welcome-ui/system" "^4.0.1"
+    react-animate-height "^2.0.23"
+    reakit "^1.3.11"
+
 "@welcome-ui/box@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@welcome-ui/box/-/box-4.0.1.tgz#1055a19dc3218281a7a9986ec9c4b66a5da19388"
@@ -2211,6 +2221,13 @@
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@welcome-ui/icons.cross/-/icons.cross-4.0.1.tgz#f1bcf4b90b6ed65fe7596f8ed23f47d84a9b352e"
   integrity sha512-AcNH++gnGozFxMpTGQbb5AW8917bb8dloWXpvKKtvtm5BNwfmaWPRQxK24pdzgG1GCzvZXqYVCkVAqujKSnnkA==
+  dependencies:
+    "@welcome-ui/icon" "^4.0.1"
+
+"@welcome-ui/icons.right@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/icons.right/-/icons.right-4.0.1.tgz#ef69da7a93c021098c546c2e2554d6ae001819c9"
+  integrity sha512-5LTCsNUUJuu5JiId26ADqlC1L31MD58Bug9SAaaBNaETRtF0ea68kMokiuBUJy9RsNeINdwCU1X7KvWJlPuJaA==
   dependencies:
     "@welcome-ui/icon" "^4.0.1"
 
@@ -3035,6 +3052,11 @@ cjs-module-lexer@^1.0.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz#9f84ba3244a512f3a54e5277e8eef4c489864e40"
   integrity sha512-cOU9usZw8/dXIXKtwa8pM0OTJQuJkxMN6w30csNRUerHfeQ5R6U3kkU/FtJeIf3M202OHfY2U8ccInBG7/xogA==
+
+classnames@^2.2.5:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 clean-css@^5.2.2:
   version "5.3.0"
@@ -7027,7 +7049,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.6.1, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -7107,6 +7129,14 @@ raw-body@2.4.3:
     http-errors "1.8.1"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-animate-height@^2.0.23:
+  version "2.0.23"
+  resolved "https://registry.yarnpkg.com/react-animate-height/-/react-animate-height-2.0.23.tgz#2e14ac707b20ae67b87766ccfd581e693e0e7ec7"
+  integrity sha512-DucSC/1QuxWEFzR9IsHMzrf2nrcZ6qAmLIFoENa2kLK7h72XybcMA9o073z7aHccFzdMEW0/fhAdnQG7a4rDow==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
 
 react-app-polyfill@^3.0.0:
   version "3.0.0"
