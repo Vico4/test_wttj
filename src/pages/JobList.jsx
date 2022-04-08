@@ -59,11 +59,11 @@ function JobList() {
         <Box display="flex" w="100%" justifyContent="center" alignItems="center" backgroundColor="nude.100">
             <Stack>
                 <Text variant='h1'>Welcome to the jungle</Text>
-                <Searchbar />
+                <Search/>
                 {isLoading ? 
                     (<Loader/>) : 
-                    (<>{jobList.map((job) => (
-                    <JobCard {...job}/>
+                    (<>{jobList.map((job, index) => (
+                    <JobCard {...job} key={index} />
 
                     
                     ))}</>)
