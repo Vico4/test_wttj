@@ -20,8 +20,11 @@ function JobList() {
     const [search, setSearch] = useState('')
     const modal = useModalState()
 
+    const handleChange = (newValue) => {
+        setSearch(newValue)
+      }
 
-    // afficher jobInfos et jobDetails avec une key et les data en props 
+
 
     // afficher tous les détails dans un truc déroulant plutôt que dans JobPage 
     // pour pas multiplier les fetch ? 
@@ -59,13 +62,15 @@ function JobList() {
         <Box display="flex" w="100%" justifyContent="center" alignItems="center" backgroundColor="nude.100">
             <Stack>
                 <Text variant='h1'>Welcome to the jungle</Text>
-                <Search/>
+                <Search 
+                    placeholder="Your dream job ?"
+                    onChange={handleChange}
+                    />
                 {isLoading ? 
                     (<Loader/>) : 
                     (<>{jobList.map((job, index) => (
+                        {search} === job.name || {search} === '' &&
                     <JobCard {...job} key={index} />
-
-                    
                     ))}</>)
                     }
             </Stack>
