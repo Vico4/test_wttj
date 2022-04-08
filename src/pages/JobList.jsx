@@ -1,13 +1,13 @@
-import Searchbar from '../components/Searchbar'
-import JobInfos from '../components/JobInfos'
 import { Loader } from '@welcome-ui/loader'
 import { Box } from '@welcome-ui/box'
 import { Search } from '@welcome-ui/search'
 import { Stack } from '@welcome-ui/stack'
 import { Text } from '@welcome-ui/text'
 import { useState, useEffect } from 'react'
-import { Modal, useModalState } from '@welcome-ui/modal'
 import JobCard from '../components/Jobcard'
+import { InputText } from '@welcome-ui/input-text'
+
+
 
 
 function JobList() {
@@ -18,23 +18,14 @@ function JobList() {
     // mettre un state filter géré par un composant form
     const [filters, setFilters] = useState({})
     const [search, setSearch] = useState('')
-    const modal = useModalState()
 
-    const handleChange = (newValue) => {
-        setSearch(newValue)
+    const handleChange = (event) => {
+        setSearch(event.target.value)
       }
 
-
-
-    // afficher tous les détails dans un truc déroulant plutôt que dans JobPage 
-    // pour pas multiplier les fetch ? 
-
     // utiliser formulaire controlé avec onChange et onSubmit pour setSearch
-    // pas vraiment besoin du composant SearchBar ? 
 
     // conditionner l'affichage en fonction de la recherche et des filtres 
-
-    // inclure bouton postuler ici ou dans le composant JobInfos ? 
 
     useEffect(() => {
         async function fetchData() {
@@ -62,15 +53,16 @@ function JobList() {
         <Box display="flex" w="100%" justifyContent="center" alignItems="center" backgroundColor="nude.100">
             <Stack>
                 <Text variant='h1'>Welcome to the jungle</Text>
-                <Search 
-                    placeholder="Your dream job ?"
+                <InputText 
+                    name="search" 
+                    placeholder="Your dream job ?" 
                     onChange={handleChange}
                     />
                 {isLoading ? 
                     (<Loader/>) : 
                     (<>{jobList.map((job, index) => (
-                        {search} === job.name || {search} === '' &&
-                    <JobCard {...job} key={index} />
+                        job.name.includes(search) || !search ? 
+                    <JobCard {...job} key={index} /> : null
                     ))}</>)
                     }
             </Stack>

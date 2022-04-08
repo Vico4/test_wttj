@@ -10,6 +10,7 @@
     "@welcome-ui/box": "^4.0.1",
     "@welcome-ui/button": "^4.0.1",
     "@welcome-ui/core": "^4.0.1",
+    "@welcome-ui/input-text": "^4.0.3",
     "@welcome-ui/loader": "^4.0.1",
     "@welcome-ui/modal": "^4.0.1",
     "@welcome-ui/search": "^4.0.2",
