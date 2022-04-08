@@ -11,6 +11,7 @@
     "@welcome-ui/button": "^4.0.1",
     "@welcome-ui/core": "^4.0.1",
     "@welcome-ui/loader": "^4.0.1",
+    "@welcome-ui/modal": "^4.0.1",
     "@welcome-ui/search": "^4.0.2",
     "@welcome-ui/stack": "^4.0.1",
     "@welcome-ui/text": "^4.0.1",

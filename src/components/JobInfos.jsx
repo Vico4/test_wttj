@@ -4,6 +4,8 @@ import { Button } from '@welcome-ui/button'
 import JobDetails from './Jobdetails'
 import { useState } from 'react'
 import { Accordion } from '@welcome-ui/accordion'
+import { Modal, useModalState } from '@welcome-ui/modal'
+
 
 
 
@@ -12,13 +14,10 @@ import { Accordion } from '@welcome-ui/accordion'
 // intégrer bouton apply ? 
 
 function JobInfos(props) {
-    const [detailsVisible, showDetails] = useState(false)
     const urls = props.websites_urls
     const wttj_url = urls.find(element => element.website_reference === "wttj_fr")
     const url = wttj_url.url 
-    console.log(urls)
-    console.log(wttj_url)
-    console.log(url)
+    const modal = useModalState()
     
 
     return(
@@ -31,14 +30,18 @@ function JobInfos(props) {
                 <Text variant="h5"> {props.contract_type.en} </Text>
                 <Text variant="h5"> {props.office.name} </Text>
             </Box>
-            <Accordion title="show details" marginBottom="2%">
-                <JobDetails 
-                    description={props.description}
+            <Modal.Trigger as={Button} {...modal}>
+                Open modal
+            </Modal.Trigger>
+            <Modal {...modal} ariaLabel="example">
+                <Modal.Content>
+                    <JobDetails description={props.description}
                     profile={props.profile}
                     process={props.recruitment_process}
                     salary={props.salary}
                      />
-            </Accordion>
+                </Modal.Content>
+        </Modal>
             <Button as="a" href={url} target="_blank"> Apply </Button>
         </Box>
     )
