@@ -16,15 +16,23 @@ function JobList() {
     const [isLoading, setLoading] = useState(true)
     const [error, setError] = useState(false)
     // mettre un state filter géré par un composant form
-    const [filters, setFilters] = useState({})
+    // const [groupBy, setGroupBy] = useState('department')
     const [search, setSearch] = useState('')
 
     const handleChange = (event) => {
         setSearch(event.target.value)
       }
 
-    // utiliser formulaire controlé avec onChange et onSubmit pour setSearch
+    const handleSelect = (event) => {
+        const group = event.target.value
+        setLoading(true)
+        console.log(jobList[0][group])
+        const groupedJobList = jobList.sort(function compare(){})
+        getJobList(groupedJobList)
+        setLoading(false)
+    }
 
+    // utiliser composant Select pour grouper par office.name et department.name
     // conditionner l'affichage en fonction de la recherche et des filtres 
 
     useEffect(() => {

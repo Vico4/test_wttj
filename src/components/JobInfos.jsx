@@ -23,7 +23,8 @@ function JobInfos(props) {
             <Text variant="h4"> {props.name} </Text>
             <Box display="flex" flexDirection="row">
                 <Text variant="h5"> {props.contract_type.en} </Text>
-                <Text variant="h5"> {props.office.name} </Text>
+                <Text variant="h5"> {"==" +props.office.name} </Text>
+                <Text variant="h5"> {"==" + props.department.name} </Text>
             </Box>
             </Box>
     )
