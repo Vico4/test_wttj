@@ -6,8 +6,8 @@ import { Text } from '@welcome-ui/text'
 import { useState, useEffect } from 'react'
 import JobCard from '../components/Jobcard'
 import { InputText } from '@welcome-ui/input-text'
-
-
+import { RadioGroup } from '@welcome-ui/radio-group'
+import { Field } from '@welcome-ui/field'
 
 
 function JobList() {
@@ -26,14 +26,29 @@ function JobList() {
     const handleSelect = (event) => {
         const group = event.target.value
         setLoading(true)
-        console.log(jobList[0][group])
-        const groupedJobList = jobList.sort(function compare(){})
+        const groupedJobList = [...jobList]
+        if(group === 'published_at') {
+            groupedJobList.sort(function compare(a, b) {
+                if (a[group] < b[group])
+                   return 1;
+                if (a[group] > b[group] )
+                   return -1;
+                return 0;
+              })
+            console.log(groupedJobList)
+        }
+        else {
+        groupedJobList.sort(function compare(a, b) {
+            if (a[group].name < b[group].name)
+               return -1;
+            if (a[group].name > b[group].name )
+               return 1;
+            return 0;
+          })
+        }
         getJobList(groupedJobList)
         setLoading(false)
     }
-
-    // utiliser composant Select pour grouper par office.name et department.name
-    // conditionner l'affichage en fonction de la recherche et des filtres 
 
     useEffect(() => {
         async function fetchData() {
@@ -66,10 +81,23 @@ function JobList() {
                     placeholder="Your dream job ?" 
                     onChange={handleChange}
                     />
+                <Field
+                label="Group by :">
+                <RadioGroup name="groupBy" 
+                    options={[
+                    {value: 'office',
+                    label: 'office location'},
+                    {value: 'department',
+                    label: 'department (Media, Tech, etc.)'},
+                    {value: 'published_at',
+                    label: 'none'}
+                    ]} 
+                    onChange={handleSelect} />
+                </Field>
                 {isLoading ? 
                     (<Loader/>) : 
                     (<>{jobList.map((job, index) => (
-                        job.name.includes(search) || !search ? 
+                        job.name.toLowerCase().includes(search.toLowerCase()) || !search ? 
                     <JobCard {...job} key={index} /> : null
                     ))}</>)
                     }
