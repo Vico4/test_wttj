@@ -5,21 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { createTheme, WuiProvider } from '@welcome-ui/core'
 import JobList from './pages/JobList';
 
-const options = {
-  defaultFontFamily: 'Helvetica',
-  headingFontFamily: 'Georgia',
-  colors: {
-    primary: {
-      500: '#124C80'
-    },
-    success: {
-      500: '#32CD32'
-    }
-  }
-}
-
-// Create your theme
-const theme = createTheme(options)
+const theme = createTheme()
 
 ReactDOM.render(
   <React.StrictMode>

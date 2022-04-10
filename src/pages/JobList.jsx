@@ -70,10 +70,11 @@ function JobList() {
     }
 
     return(
-        <Box display="flex" w="100%" justifyContent="center" alignItems="center" backgroundColor="nude.100">
-            <Stack>
-                <Text variant='h1'>Welcome to the jungle</Text>
+        <Box display="flex" w="100%" justifyContent="center" backgroundColor="nude.100">
+            <Stack alignItems="center">
+                <Text variant='h1' textAlign="center">Welcome to the jungle</Text>
                 <InputText 
+                    w="150%"
                     name="search" 
                     placeholder="Your dream job ?" 
                     onChange={handleChange}
