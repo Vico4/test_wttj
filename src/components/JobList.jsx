@@ -3,7 +3,7 @@ import { Box } from '@welcome-ui/box'
 import { Stack } from '@welcome-ui/stack'
 import { Text } from '@welcome-ui/text'
 import { useState, useEffect } from 'react'
-import JobCard from '../components/Jobcard'
+import JobCard from './Jobcard'
 import { InputText } from '@welcome-ui/input-text'
 import { RadioGroup } from '@welcome-ui/radio-group'
 import { Field } from '@welcome-ui/field'
@@ -70,11 +70,10 @@ function JobList() {
     }
 
     return(
-        <Box display="flex" w="100%" justifyContent="center" backgroundColor="nude.100">
+        <Box backgroundColor="nude.100">
             <Stack alignItems="center">
                 <Text variant='h1' textAlign="center">Welcome to the jungle</Text>
                 <InputText 
-                    w="150%"
                     name="search" 
                     placeholder="Your dream job ?" 
                     onChange={handleChange}

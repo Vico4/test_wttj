@@ -11,16 +11,16 @@ function JobCard(props) {
     const modal = useModalState()
 
     return(
-        <Box display="flex" flexDirection="column" w='100%' 
-        backgroundColor="primary.100" border='1px solid black'
-        padding='2%' margin='2%'>
+        <Box display="flex" flexDirection="column" alignItems='center'
+        backgroundColor="light.900" borderRadius="sm" boxShadow="sm" margin="xl" maxWidth={600}
+        padding='2%' paddingTop='0%'>
             <JobInfos 
                 {...props}
             />
-            <Modal.Trigger as={Button} {...modal}>
+            <Modal.Trigger as={Button} {...modal} w='20%' margin='1%'>
                 See details
             </Modal.Trigger>
-            <Modal {...modal} ariaLabel="example">
+            <Modal {...modal} ariaLabel="jobdetails">
                 <Modal.Content>
                     <JobDetails 
                         {...props}
@@ -28,7 +28,7 @@ function JobCard(props) {
                      />
                 </Modal.Content>
         </Modal>
-            <Button as="a" href={url} target="_blank"> Apply </Button>
+            <Button as="a" href={url} target="_blank" w='20%' margin='1%'> Apply </Button>
         </Box>
     )
 }

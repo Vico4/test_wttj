@@ -2166,6 +2166,14 @@
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
 
+"@welcome-ui/badge@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/badge/-/badge-4.0.1.tgz#907d3c5a89c0951fdd238e099d98be86b7260fee"
+  integrity sha512-BkadNH2ZS3G0BSaUZZvHOiSElp0kyGEZcGtgdxvuh2RJPy36YQAmYZXCajzp1aDzyiotGx/z/5DpEGNxbhdgLQ==
+  dependencies:
+    "@welcome-ui/system" "^4.0.1"
+    "@welcome-ui/tag" "^4.0.1"
+
 "@welcome-ui/box@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@welcome-ui/box/-/box-4.0.1.tgz#1055a19dc3218281a7a9986ec9c4b66a5da19388"
@@ -2257,6 +2265,13 @@
   dependencies:
     "@welcome-ui/icon" "^4.0.1"
 
+"@welcome-ui/icons.contract@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/icons.contract/-/icons.contract-4.0.1.tgz#a33ea680d5d013fd1d8fb4f5f03918f443119925"
+  integrity sha512-8SKtU+BoxK0TcIN8PFtd9a9DjYOQmqV6OUUmOc4h78MYNYy4xwXlgNA28mjyZaqjDLAmBIR/AiwPiC5hvPxgYg==
+  dependencies:
+    "@welcome-ui/icon" "^4.0.1"
+
 "@welcome-ui/icons.cross@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@welcome-ui/icons.cross/-/icons.cross-4.0.1.tgz#f1bcf4b90b6ed65fe7596f8ed23f47d84a9b352e"
@@ -2264,10 +2279,24 @@
   dependencies:
     "@welcome-ui/icon" "^4.0.1"
 
+"@welcome-ui/icons.department@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/icons.department/-/icons.department-4.0.1.tgz#ad632eece64cd6c42cbce3638bc9c5934b9be4b3"
+  integrity sha512-davQmBRRFk3Ok6GsZIDdwqnhHbv5RcO1KMbYFNxs2m2UKNOZ9n6fpmaejPhBQtR/41ACSUizZOJL3iZ9Ojgt6w==
+  dependencies:
+    "@welcome-ui/icon" "^4.0.1"
+
 "@welcome-ui/icons.information@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@welcome-ui/icons.information/-/icons.information-4.0.1.tgz#b3e21d396bc48b7917dc2df9c220eb6ed405f31c"
   integrity sha512-P6Ynii8W8pKFV/bzh6yXTeHfqNYeI6kRh+5QZz4yogiPBX/AMfA8lP5hEALLC2xfLvrOr5MhqmlNGhuPftAbHw==
+  dependencies:
+    "@welcome-ui/icon" "^4.0.1"
+
+"@welcome-ui/icons.location@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@welcome-ui/icons.location/-/icons.location-4.0.1.tgz#8158683bf87ac7d5bd6a3269dd5767fe950a1b6d"
+  integrity sha512-2RuX2VguPRSvr6ZzGAe0pRjBJI5ZDcOIFEb1XE7sl1yv42Luc8a2USdkd1yjvwe+Arywh8kod4QQNEFKN9Wzxg==
   dependencies:
     "@welcome-ui/icon" "^4.0.1"
 

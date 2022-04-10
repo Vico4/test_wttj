@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createTheme, WuiProvider } from '@welcome-ui/core'
-import JobList from './pages/JobList';
+import JobList from './components/JobList';
 
 const theme = createTheme()
 
