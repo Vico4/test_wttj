@@ -1,9 +1,6 @@
 import { Box } from '@welcome-ui/box'
-import { Text } from '@welcome-ui/text'
 import { Button } from '@welcome-ui/button'
 import JobDetails from './Jobdetails'
-import { useState } from 'react'
-import { Accordion } from '@welcome-ui/accordion'
 import { Modal, useModalState } from '@welcome-ui/modal'
 import JobInfos from './JobInfos'
 

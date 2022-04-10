@@ -2,14 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { createTheme, WuiProvider } from '@welcome-ui/core'
-import { Button } from '@welcome-ui/button'
 import JobList from './pages/JobList';
-import JobDetails from './pages/JobPage';
-import JobPage from './pages/JobPage';
-
-
 
 const options = {
   defaultFontFamily: 'Helvetica',
@@ -27,10 +21,8 @@ const options = {
 // Create your theme
 const theme = createTheme(options)
 
-
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
       <WuiProvider
       theme={theme}
       // Will inject a CSS reset with normalizer
@@ -38,12 +30,10 @@ ReactDOM.render(
       // Will show the focus ring on keyboard navigation only
       shouldHideFocusRingOnClick
       >
-        <Routes>
-          <Route path="/" element={<JobList/>}/>
-          <Route path="/details/:jobId" element={<JobPage/>}/>
-        </Routes>
+      <JobList/>
+  
     </WuiProvider>
-    </Router>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

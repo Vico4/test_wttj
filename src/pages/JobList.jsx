@@ -1,6 +1,5 @@
 import { Loader } from '@welcome-ui/loader'
 import { Box } from '@welcome-ui/box'
-import { Search } from '@welcome-ui/search'
 import { Stack } from '@welcome-ui/stack'
 import { Text } from '@welcome-ui/text'
 import { useState, useEffect } from 'react'
@@ -15,8 +14,6 @@ function JobList() {
     const [jobList, getJobList] = useState({})
     const [isLoading, setLoading] = useState(true)
     const [error, setError] = useState(false)
-    // mettre un state filter géré par un composant form
-    // const [groupBy, setGroupBy] = useState('department')
     const [search, setSearch] = useState('')
 
     const handleChange = (event) => {
