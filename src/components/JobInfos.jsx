@@ -1,12 +1,8 @@
 import { Box } from '@welcome-ui/box'
 import { Text } from '@welcome-ui/text'
-import { Badge } from '@welcome-ui/badge'
 import { LocationIcon } from '@welcome-ui/icons.location'
 import { ContractIcon } from '@welcome-ui/icons.contract'
 import { DepartmentIcon } from '@welcome-ui/icons.department'
-
-
-
 
 
 function JobInfos(props) {

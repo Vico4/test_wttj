@@ -12,7 +12,7 @@ function JobCard(props) {
 
     return(
         <Box display="flex" flexDirection="column" alignItems='center'
-        backgroundColor="light.900" borderRadius="sm" boxShadow="sm" margin="xl" maxWidth={600}
+        backgroundColor="light.900" borderRadius="sm" boxShadow="sm" margin="xl" maxWidth={600} minWidth={400}
         padding='2%' paddingTop='0%'>
             <JobInfos 
                 {...props}
