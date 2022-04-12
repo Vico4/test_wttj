@@ -1,8 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render } from '@testing-library/react';
+import JobList from './components/JobList'
+import { createTheme, WuiProvider } from '@welcome-ui/core'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('JobList', () => {
+  test('Should render without crash', async () => {
+    const theme = createTheme()
+    render(<WuiProvider theme={theme}>
+      <JobList />
+      </WuiProvider>
+    )
+})
+})

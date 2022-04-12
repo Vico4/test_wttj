@@ -21,7 +21,7 @@ function JobDetails(props) {
         <div>{props.salary.min && "salaire minimum : " + props.salary.min + props.salary.currency}</div>
         <div>{props.salary.min && "salaire maximum : " + props.salary.max}</div>
         <Box w="100%" display="flex" justifyContent="center" alignItems="center">
-        <Button as="a" href={props.url} target="_blank" > Apply </Button>
+            <Button as="a" href={props.url} target="_blank" > Apply </Button>
         </Box>
         </>
     )
