@@ -12,12 +12,12 @@ function JobCard(props) {
 
     return(
         <Box display="flex" flexDirection="column" alignItems='center'
-        backgroundColor="light.900" borderRadius="sm" boxShadow="sm" margin="xl" maxWidth={600} minWidth={400}
+        backgroundColor="light.900" borderRadius="sm" boxShadow="sm" margin="xl" maxWidth={600} minWidth={300}
         padding='2%' paddingTop='0%'>
             <JobInfos 
                 {...props}
             />
-            <Modal.Trigger as={Button} {...modal} w='20%' margin='1%'>
+            <Modal.Trigger as={Button} {...modal} w='30%' margin='1%'>
                 See details
             </Modal.Trigger>
             <Modal {...modal} ariaLabel="jobdetails">
@@ -28,7 +28,7 @@ function JobCard(props) {
                      />
                 </Modal.Content>
         </Modal>
-            <Button as="a" href={url} target="_blank" w='20%' margin='1%'> Apply </Button>
+            <Button as="a" href={url} target="_blank" w='30%' margin='1%'> Apply </Button>
         </Box>
     )
 }
